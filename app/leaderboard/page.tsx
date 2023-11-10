@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center p-24">
       <div className="mb-3 max-w-4xl w-full justify-between flex flex-col md:flex-row">
-        <h1 className="text-3xl font-mono font-semibold">
+        <h1 className="text-2xl font-mono font-semibold">
           <a href="/">COSCON 2023</a>
         </h1>
         <h1 className="text-xl font-semibold">
