@@ -18,7 +18,7 @@ export default function Home() {
         </h1>
       </div>
       <div className="max-w-4xl w-full">
-        Coming soon!
+        <b>Coming soon!</b>
       </div>
     </main>
   );

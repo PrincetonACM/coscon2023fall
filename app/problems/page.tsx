@@ -85,12 +85,12 @@ export default function Home() {
       </div>
       <div className="max-w-4xl w-full">
         <p className="mb-3">
-          There are <b>{problems.length} problems</b> worth a total of{" "}
+          {/* There are <b>{problems.length} problems</b> worth a total of{" "}
           <b>
             {problems.map((problem) => problem.points).reduce((a, b) => a + b)}{" "}
             points
           </b>
-          . Each problem will require either submission of your solution source
+          . */}Each problem will require either submission of your solution source
           code to Codeforces, or submission of the files comprising your
           solution to Dropbox.
         </p>
@@ -152,7 +152,9 @@ export default function Home() {
             address&quot;, and then upload.
           </li>
         </ul>
-        {problems.map((problem, index) => (
+        {/* also uncomment problem totals above */}
+        <p><b>Coming soon!</b></p>
+        {/* {problems.map((problem, index) => (
           <div key={problem.statementName} className="mb-3">
             <h2 className="text-2xl font-semibold mb-3">{`P${index}: ${problem.name} [${problem.points} points]`}</h2>
             <a
@@ -168,7 +170,7 @@ export default function Home() {
               Submit to {problem.submissionType}
             </a>
           </div>
-        ))}
+        ))} */}
       </div>
     </main>
   );
