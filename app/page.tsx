@@ -35,7 +35,7 @@ export default function Home() {
     <main className="flex flex-col items-center p-24">
       <div className="mb-3 max-w-4xl w-full justify-between flex flex-col md:flex-row">
         <h1 className="text-2xl font-mono font-semibold text-orange-500">
-          <a href="/coscon">COSCON 23-24</a>
+          <a href="/coscon">COSCON Fall 2023</a>
         </h1>
         <h1 className="text-xl font-semibold">
           <a href="/coscon/problems">Problems</a>
@@ -79,7 +79,7 @@ export default function Home() {
             <b>11:00 AM</b> Problems released!
           </li>
           <li>
-            <b>??:?? PM</b> Pizza and boba arrive
+            <b>12:30 PM</b> Pizza and boba arrive
           </li>
           <li>
             <b>04:00 PM</b> Competition ends
@@ -117,7 +117,7 @@ export default function Home() {
             <li key={officer}>{officer}</li>
           ))}
         </ul>
-        <h2 className="text-2xl font-semibold mb-3">Sponsors</h2>
+        <h2 className="text-2xl font-semibold mb-3">Made possible by</h2>
         <div className="w-full overflow-hidden bg-orange-100 p-3 rounded-2xl">
           <div
             style={{ width: 300 * sponsors.length * 2 }}

@@ -5,7 +5,7 @@ export default function Home() {
     <main className="flex flex-col items-center p-24">
       <div className="mb-3 max-w-4xl w-full justify-between flex flex-col md:flex-row">
         <h1 className="text-2xl font-mono font-semibold">
-          <a href="/coscon">COSCON 23-24</a>
+          <a href="/coscon">COSCON Fall 2023</a>
         </h1>
         <h1 className="text-xl font-semibold">
           <a href="/coscon/problems">Problems</a>
