@@ -1,10 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  // basePath: '/coscon',
-  images: {
-    unoptimized: true,
-  },
+  basePath: '/coscon',
 }
 
 module.exports = nextConfig
