@@ -10,6 +10,21 @@ const config: Config = {
     listStyleType: {
       'dash': '"- "',
     },
+    extend: {
+      animation: {
+        'infinite-slider': 'infiniteSlider 45s linear infinite',
+      },
+      keyframes: {
+        infiniteSlider: {
+          '0%': {
+            transform: 'translateX(0)',
+          },
+          '100%': {
+            transform: 'translateX(-50%)',
+          },
+        },
+      },
+    }
   },
   plugins: [],
 }

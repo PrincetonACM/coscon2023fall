@@ -6,63 +6,63 @@ const problems = [
     points: 5,
     statementName: "ConsultingCharade.pdf",
     submissionType: "Codeforces",
-    submissionUrl: "",
+    submissionUrl: "https://codeforces.com/group/bUW9rSzJeG/contest/435278",
   },
   {
     name: "The Construction Campaign",
     points: 15,
     statementName: "TheConstructionCampaign.pdf",
     submissionType: "Dropbox",
-    submissionUrl: "",
+    submissionUrl: "https://www.dropbox.com/request/DW8loV5ZZksZWi3N9n7c",
   },
   {
     name: "Communication Conundrum",
     points: 15,
     statementName: "CommunicationConundrum.pdf",
     submissionType: "Codeforces",
-    submissionUrl: "",
+    submissionUrl: "https://codeforces.com/group/bUW9rSzJeG/contest/435278",
   },
   {
     name: "Decryption Dilemma",
     points: 15,
     statementName: "DecryptionDilemma.pdf",
     submissionType: "Dropbox",
-    submissionUrl: "",
+    submissionUrl: "https://www.dropbox.com/request/DW8loV5ZZksZWi3N9n7c",
   },
   {
     name: "March Sadness",
     points: 20,
     statementName: "MarchSadness.pdf",
     submissionType: "Codeforces",
-    submissionUrl: "",
+    submissionUrl: "https://codeforces.com/group/bUW9rSzJeG/contest/435278",
   },
   {
     name: "The Missing Electron",
     points: 25,
     statementName: "TheMissingElectron.pdf",
     submissionType: "Dropbox",
-    submissionUrl: "",
+    submissionUrl: "https://www.dropbox.com/request/DW8loV5ZZksZWi3N9n7c",
   },
   {
     name: "Cyberchondria",
     points: 20,
     statementName: "Cyberchondria.pdf",
     submissionType: "Codeforces",
-    submissionUrl: "",
+    submissionUrl: "https://codeforces.com/group/bUW9rSzJeG/contest/435278",
   },
   {
     name: "Some Assembly Required",
     points: 25,
     statementName: "SomeAssemblyRequired.pdf",
     submissionType: "Dropbox",
-    submissionUrl: "",
+    submissionUrl: "https://www.dropbox.com/request/DW8loV5ZZksZWi3N9n7c",
   },
   {
     name: "Theorems AI",
     points: 15,
     statementName: "TheoremsAI.pdf",
     submissionType: "Codeforces",
-    submissionUrl: "",
+    submissionUrl: "https://codeforces.com/group/bUW9rSzJeG/contest/435278",
   },
 ];
 
@@ -71,7 +71,7 @@ export default function Home() {
     <main className="flex flex-col items-center p-24">
       <div className="mb-3 max-w-4xl w-full justify-between flex flex-col md:flex-row">
         <h1 className="text-2xl font-mono font-semibold">
-          <a href="/">COSCON 2023</a>
+          <a href="/">COSCON 23-24</a>
         </h1>
         <h1 className="text-xl font-semibold text-orange-500">
           <a href="/problems">Problems</a>
@@ -92,8 +92,10 @@ export default function Home() {
           </b>
           . Each problem will require either submission of your solution source
           code to Codeforces, or submission of the files comprising your
-          solution to Dropbox. Follow these instructions for submission to
-          Codeforces:
+          solution to Dropbox.
+        </p>
+        <p className="mb-3">
+          Follow these instructions for submission to <b>Codeforces:</b>
         </p>
         <ul className="mb-3 list-dash">
           <li>
@@ -131,7 +133,25 @@ export default function Home() {
             Python, Java and many other languages to write your solutions.
           </li>
         </ul>
-        <b>[DROPBOX INSTRUCTIONS?]</b>
+        <p className="mb-3">
+          Follow these instructions for submission to <b>Dropbox:</b>
+        </p>
+        <ul className="mb-3 list-dash">
+          <li>
+            Go to the Dropbox File Request link for the problem by clicking on
+            the appropriate button below. Click &quot;Add files&quot; and select
+            your solution file(s).
+          </li>
+          <li>
+            If you see a message that you are &quot;Signed in to Personal
+            Dropbox&quot;, sign out via the button at the top right of the page.
+          </li>
+          <li>
+            Enter your team Codeforces handle under &quot;Your name&quot; and
+            the email for your team Codeforces account under &quot;Your email
+            address&quot;, and then upload.
+          </li>
+        </ul>
         {problems.map((problem, index) => (
           <div key={problem.statementName} className="mb-3">
             <h2 className="text-2xl font-semibold mb-3">{`P${index}: ${problem.name} [${problem.points} points]`}</h2>
