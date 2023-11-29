@@ -1,6 +1,21 @@
-import Image from "next/image";
+'use client'
+import { useState, useEffect } from 'react';
 
 export default function Home() {
+  const [scores, setScores] = useState([])
+
+  const fetchScores = async () => {
+    const res = await fetch('http://localhost:8000/scores')
+    const data = await res.json()
+    setScores(data)
+  }
+
+  useEffect(() => {
+    fetchScores()
+    const id = setInterval(fetchScores, 5000)
+    return () => clearInterval(id)
+  }, [])
+
   return (
     <main className="flex flex-col items-center p-24">
       <div className="mb-3 max-w-4xl w-full justify-between flex flex-col md:flex-row">
@@ -17,8 +32,31 @@ export default function Home() {
           <a href="/coscon/leaderboard">Leaderboard</a>
         </h1>
       </div>
-      <div className="max-w-4xl w-full">
-        <b>Coming soon!</b>
+      <div className="max-w-4xl w-full overflow-x-auto">
+        <table>
+          <thead>
+            {scores.slice(0, 1).map((row, i) => (
+              <tr key={i}>
+                {row.map((data, j) => (
+                  <td key={j} className='whitespace-nowrap px-3 py-1'>
+                    <b>{data}</b>
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </thead>
+          <tbody>
+            {scores.slice(1).map((row, i) => (
+              <tr key={i}>
+                {row.map((data, j) => (
+                  <td key={j} className='whitespace-nowrap px-3 py-1'>
+                    {data}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </main>
   );
