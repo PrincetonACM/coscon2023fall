@@ -1,68 +1,83 @@
-import Image from "next/image";
+// const problems = [
+//   {
+//     name: "Consulting Charade",
+//     points: 5,
+//     statementName: "ConsultingCharade.pdf",
+//     submissionType: "Codeforces",
+//     submissionUrl: "https://codeforces.com/group/bUW9rSzJeG/contest/435278",
+//   },
+//   {
+//     name: "The Construction Campaign",
+//     points: 15,
+//     statementName: "TheConstructionCampaign.pdf",
+//     submissionType: "Dropbox",
+//     submissionUrl: "https://www.dropbox.com/request/DW8loV5ZZksZWi3N9n7c",
+//   },
+//   {
+//     name: "Communication Conundrum",
+//     points: 15,
+//     statementName: "CommunicationConundrum.pdf",
+//     submissionType: "Codeforces",
+//     submissionUrl: "https://codeforces.com/group/bUW9rSzJeG/contest/435278",
+//   },
+//   {
+//     name: "Decryption Dilemma",
+//     points: 15,
+//     statementName: "DecryptionDilemma.pdf",
+//     submissionType: "Dropbox",
+//     submissionUrl: "https://www.dropbox.com/request/DW8loV5ZZksZWi3N9n7c",
+//   },
+//   {
+//     name: "March Sadness",
+//     points: 20,
+//     statementName: "MarchSadness.pdf",
+//     submissionType: "Codeforces",
+//     submissionUrl: "https://codeforces.com/group/bUW9rSzJeG/contest/435278",
+//   },
+//   {
+//     name: "The Missing Electron",
+//     points: 25,
+//     statementName: "TheMissingElectron.pdf",
+//     submissionType: "Dropbox",
+//     submissionUrl: "https://www.dropbox.com/request/DW8loV5ZZksZWi3N9n7c",
+//   },
+//   {
+//     name: "Cyberchondria",
+//     points: 20,
+//     statementName: "Cyberchondria.pdf",
+//     submissionType: "Codeforces",
+//     submissionUrl: "https://codeforces.com/group/bUW9rSzJeG/contest/435278",
+//   },
+//   {
+//     name: "Some Assembly Required",
+//     points: 25,
+//     statementName: "SomeAssemblyRequired.pdf",
+//     submissionType: "Dropbox",
+//     submissionUrl: "https://www.dropbox.com/request/DW8loV5ZZksZWi3N9n7c",
+//   },
+//   {
+//     name: "Theorems AI",
+//     points: 15,
+//     statementName: "TheoremsAI.pdf",
+//     submissionType: "Codeforces",
+//     submissionUrl: "https://codeforces.com/group/bUW9rSzJeG/contest/435278",
+//   },
+// ];
 
 const problems = [
   {
-    name: "Consulting Charade",
-    points: 5,
-    statementName: "ConsultingCharade.pdf",
+    name: "Codeforces Problem Test",
+    points: 0,
+    statementName: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     submissionType: "Codeforces",
     submissionUrl: "https://codeforces.com/group/bUW9rSzJeG/contest/435278",
   },
   {
-    name: "The Construction Campaign",
-    points: 15,
-    statementName: "TheConstructionCampaign.pdf",
+    name: "File Problem Test",
+    points: 0,
+    statementName: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     submissionType: "Dropbox",
     submissionUrl: "https://www.dropbox.com/request/DW8loV5ZZksZWi3N9n7c",
-  },
-  {
-    name: "Communication Conundrum",
-    points: 15,
-    statementName: "CommunicationConundrum.pdf",
-    submissionType: "Codeforces",
-    submissionUrl: "https://codeforces.com/group/bUW9rSzJeG/contest/435278",
-  },
-  {
-    name: "Decryption Dilemma",
-    points: 15,
-    statementName: "DecryptionDilemma.pdf",
-    submissionType: "Dropbox",
-    submissionUrl: "https://www.dropbox.com/request/DW8loV5ZZksZWi3N9n7c",
-  },
-  {
-    name: "March Sadness",
-    points: 20,
-    statementName: "MarchSadness.pdf",
-    submissionType: "Codeforces",
-    submissionUrl: "https://codeforces.com/group/bUW9rSzJeG/contest/435278",
-  },
-  {
-    name: "The Missing Electron",
-    points: 25,
-    statementName: "TheMissingElectron.pdf",
-    submissionType: "Dropbox",
-    submissionUrl: "https://www.dropbox.com/request/DW8loV5ZZksZWi3N9n7c",
-  },
-  {
-    name: "Cyberchondria",
-    points: 20,
-    statementName: "Cyberchondria.pdf",
-    submissionType: "Codeforces",
-    submissionUrl: "https://codeforces.com/group/bUW9rSzJeG/contest/435278",
-  },
-  {
-    name: "Some Assembly Required",
-    points: 25,
-    statementName: "SomeAssemblyRequired.pdf",
-    submissionType: "Dropbox",
-    submissionUrl: "https://www.dropbox.com/request/DW8loV5ZZksZWi3N9n7c",
-  },
-  {
-    name: "Theorems AI",
-    points: 15,
-    statementName: "TheoremsAI.pdf",
-    submissionType: "Codeforces",
-    submissionUrl: "https://codeforces.com/group/bUW9rSzJeG/contest/435278",
   },
 ];
 
@@ -84,14 +99,14 @@ export default function Home() {
         </h1>
       </div>
       <div className="max-w-4xl w-full">
-        <p><b>Coming soon!</b></p>
-        {/* <p className="mb-3">
+        {/* <p><b>Coming soon!</b></p> */}
+        <p className="mb-3">
           There are <b>{problems.length} problems</b> worth a total of{" "}
           <b>
             {problems.map((problem) => problem.points).reduce((a, b) => a + b)}{" "}
             points
           </b>
-          .Each problem will require either submission of your solution source
+          . Each problem will require either submission of your solution source
           code to Codeforces, or submission of the files comprising your
           solution to Dropbox.
         </p>
@@ -107,10 +122,10 @@ export default function Home() {
           </li>
           <li>
             <a
-              href="https://forms.gle/YkgWHJeygXqa3r1bA"
+              href="https://forms.gle/8hMRdNPwWWPviKHU8"
               className="text-orange-500"
             >
-              Fill in this form
+              Submit this form
             </a>{" "}
             with your Codeforces handle.
           </li>
@@ -144,12 +159,17 @@ export default function Home() {
             your solution file(s).
           </li>
           <li>
-            If you see a message that you are &quot;Signed in to Personal
-            Dropbox&quot;, sign out via the button at the top right of the page.
+            Your solution files <b>must</b> use the name format:{" "}
+            <code>[Team ID]_p[Problem number].[Extension]</code>.{" "}
+            <code>[Team ID]</code> should be replaced with your provided team
+            identifier, <code>[Problem number]</code> should be replaced with
+            the problem number for which you are submitting a solution, and{" "}
+            <code>[Extension]</code> should be the usual file extension based on
+            the file type. For example, <code>a3f8_p10.txt</code>.
           </li>
           <li>
-            Enter your team Codeforces handle under &quot;Your name&quot; and
-            the email for your team Codeforces account under &quot;Your email
+            If required, enter the name and Princeton email address for any of
+            your team members under &quot;Your name&quot; and &quot;Your email
             address&quot;, and then upload.
           </li>
         </ul>
@@ -159,17 +179,21 @@ export default function Home() {
             <a
               className="p-1 rounded bg-orange-500 font-semibold mr-3"
               href={problem.statementName}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               View statement
             </a>
             <a
               className="p-1 rounded bg-orange-500 font-semibold"
               href={problem.submissionUrl}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Submit to {problem.submissionType}
             </a>
           </div>
-        ))} */}
+        ))}
       </div>
     </main>
   );
