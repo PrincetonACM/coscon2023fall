@@ -3,17 +3,18 @@ import { useState, useEffect } from 'react';
 
 export default function Home() {
   const [scores, setScores] = useState([])
+  const [scoresLoading, setScoresLoading] = useState(false)
 
   const fetchScores = async () => {
-    const res = await fetch('http://localhost:8000/scores')
+    setScoresLoading(true)
+    const res = await fetch('https://us-central1-princeton-coscon.cloudfunctions.net/get-scores')
     const data = await res.json()
     setScores(data)
+    setScoresLoading(false)
   }
 
   useEffect(() => {
     fetchScores()
-    const id = setInterval(fetchScores, 5000)
-    return () => clearInterval(id)
   }, [])
 
   return (
@@ -33,30 +34,35 @@ export default function Home() {
         </h1>
       </div>
       <div className="max-w-4xl w-full overflow-x-auto">
-        <table>
-          <thead>
-            {scores.slice(0, 1).map((row, i) => (
-              <tr key={i}>
-                {row.map((data, j) => (
-                  <td key={j} className='whitespace-nowrap px-3 py-1'>
-                    <b>{data}</b>
-                  </td>
-                ))}
-              </tr>
-            ))}
-          </thead>
-          <tbody>
-            {scores.slice(1).map((row, i) => (
-              <tr key={i}>
-                {row.map((data, j) => (
-                  <td key={j} className='whitespace-nowrap px-3 py-1'>
-                    {data}
-                  </td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        {scoresLoading
+          ? <p className="mb-3">
+            Loading...
+          </p>
+          : <table>
+            <thead>
+              {scores.slice(0, 1).map((row, i) => (
+                <tr key={i}>
+                  {row.map((data, j) => (
+                    <td key={j} className='whitespace-nowrap px-3 py-1'>
+                      <b>{data}</b>
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </thead>
+            <tbody>
+              {scores.slice(1).map((row, i) => (
+                <tr key={i}>
+                  {row.map((data, j) => (
+                    <td key={j} className='whitespace-nowrap px-3 py-1'>
+                      {data}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        }
       </div>
     </main>
   );
