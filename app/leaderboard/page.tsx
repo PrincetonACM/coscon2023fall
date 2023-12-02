@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 
 export default function Home() {
-  const [scores, setScores] = useState([])
+  const [scores, setScores] = useState<string[][]>([])
   const [scoresLoading, setScoresLoading] = useState(false)
 
   const fetchScores = async () => {
