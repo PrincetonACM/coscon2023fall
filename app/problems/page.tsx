@@ -4,7 +4,7 @@ const problems = [
     points: 1,
     statementName: 'Problem0.pdf',
     submissionType: 'Codeforces',
-    submissionUrl: '',
+    submissionUrl: 'https://codeforces.com/group/bUW9rSzJeG/contest/490581/problem/A',
     dataUrl: null,
   },
   {
@@ -12,7 +12,7 @@ const problems = [
     points: 5,
     statementName: 'Problem1.pdf',
     submissionType: 'Codeforces',
-    submissionUrl: '',
+    submissionUrl: 'https://codeforces.com/group/bUW9rSzJeG/contest/490581/problem/B',
     dataUrl: null,
   },
   {
@@ -20,7 +20,7 @@ const problems = [
     points: 10,
     statementName: 'Problem2.pdf',
     submissionType: 'Codeforces',
-    submissionUrl: '',
+    submissionUrl: 'https://codeforces.com/group/bUW9rSzJeG/contest/490581/problem/C',
     dataUrl: null,
   },
   {
