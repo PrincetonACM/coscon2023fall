@@ -112,11 +112,14 @@ export default function Home() {
           sponsor is Pedro Paredes, and the organizers and problem writers this
           year are:
         </p>
-        <ul className="list-dash mb-6">
+        <ul className="list-dash mb-3">
           {organizers.map((officer) => (
             <li key={officer}>{officer}</li>
           ))}
         </ul>
+        <p className="mb-6">
+          We&apos;d like to thank Laura Cerrito for being a huge help in figuring out the logistics of the event this year!
+        </p>
         <h2 className="text-2xl font-semibold mb-3">Made possible by</h2>
         <div className="w-full overflow-hidden bg-orange-100 p-3 rounded-2xl">
           <div
