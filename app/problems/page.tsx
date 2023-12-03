@@ -5,7 +5,7 @@ const problems = [
     statementName: 'Problem0.pdf',
     submissionType: 'Codeforces',
     submissionUrl: '',
-    testData: null,
+    dataUrl: null,
   },
   {
     name: 'Princeton Subway Network',
@@ -13,7 +13,7 @@ const problems = [
     statementName: 'Problem1.pdf',
     submissionType: 'Codeforces',
     submissionUrl: '',
-    testData: null,
+    dataUrl: null,
   },
   {
     name: 'Galactic Vacation',
@@ -21,7 +21,7 @@ const problems = [
     statementName: 'Problem2.pdf',
     submissionType: 'Codeforces',
     submissionUrl: '',
-    testData: null,
+    dataUrl: null,
   },
   {
     name: 'Flip Flop Counters',
@@ -29,7 +29,7 @@ const problems = [
     statementName: 'Problem3.pdf',
     submissionType: 'Dropbox',
     submissionUrl: 'https://www.dropbox.com/request/diSQh18757xLtqj8M8zn',
-    testData: null,
+    dataUrl: null,
   },
   {
     name: 'Secret Santa',
@@ -37,7 +37,7 @@ const problems = [
     statementName: 'Problem4.pdf',
     submissionType: 'Dropbox',
     submissionUrl: 'https://www.dropbox.com/request/OjRIWUTgxAiOLR4tJNcC',
-    testData: null,
+    dataUrl: null,
   },
   {
     name: 'Hit The Fly',
@@ -45,7 +45,7 @@ const problems = [
     statementName: 'Problem5.pdf',
     submissionType: 'Dropbox',
     submissionUrl: 'https://www.dropbox.com/request/EI87uVrVEdkFSF4NCQx3',
-    testData: null,
+    dataUrl: null,
   },
   {
     name: 'Air Goodness Index',
@@ -53,7 +53,7 @@ const problems = [
     statementName: 'Problem6.pdf',
     submissionType: 'Dropbox',
     submissionUrl: 'https://www.dropbox.com/request/0c8sqtPODIWnMZoTBgLT',
-    testData: 'agi_data.zip',
+    dataUrl: 'https://www.cs.princeton.edu/~pparedes/coscon/agi_data.zip',
   },
   {
     name: 'What\'s the point?',
@@ -61,7 +61,7 @@ const problems = [
     statementName: 'Problem7.pdf',
     submissionType: 'Dropbox',
     submissionUrl: 'https://www.dropbox.com/request/9XOe6Uc3ZmEvFBMGoWpc',
-    testData: null,
+    dataUrl: null,
   },
   {
     name: 'CacheSim',
@@ -69,7 +69,7 @@ const problems = [
     statementName: 'Problem8.pdf',
     submissionType: 'Dropbox',
     submissionUrl: 'https://www.dropbox.com/request/BynVaKGRCgztL2BuzNEf',
-    testData: null,
+    dataUrl: null,
   },
   {
     name: 'Tiger Rides',
@@ -77,7 +77,7 @@ const problems = [
     statementName: 'Problem9.pdf',
     submissionType: 'Dropbox',
     submissionUrl: 'https://www.dropbox.com/request/rv41Kc4WUy2Bd28uywl0',
-    testData: 'trides_data.zip',
+    dataUrl: 'https://www.cs.princeton.edu/~pparedes/coscon/trides_data.zip',
   },
   {
     name: 'Course Registration',
@@ -85,7 +85,7 @@ const problems = [
     statementName: 'Problem10.pdf',
     submissionType: 'None',
     submissionUrl: null,
-    testData: null,
+    dataUrl: null,
   },
 ]
 
@@ -192,10 +192,10 @@ export default function Home() {
               View statement
             </a>
             {
-              problem.testData
+              problem.dataUrl
                 ? <a
                   className="p-1 rounded bg-orange-500 font-semibold mr-3"
-                  href={`/coscon/data/${problem.testData}`}
+                  href={problem.dataUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
