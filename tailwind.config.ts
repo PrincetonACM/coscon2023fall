@@ -12,7 +12,7 @@ const config: Config = {
     },
     extend: {
       animation: {
-        'infinite-slider': 'infiniteSlider 45s linear infinite',
+        'infinite-slider': 'infiniteSlider 60s linear infinite',
       },
       keyframes: {
         infiniteSlider: {

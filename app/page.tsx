@@ -15,19 +15,22 @@ const organizers = [
 ];
 
 const sponsors = [
-  { name: "Princeton COS Department", logoName: "cos.png" },
-  { name: "Citadel | Citadel Securities", logoName: "citadel.png" },
-  { name: "Jane Street", logoName: "jane-street.png" },
-  { name: "Radix Trading", logoName: "radix.png" },
-  { name: "Evergreen Statistical Trading", logoName: "est.png" },
-  { name: "Old Mission Capital", logoName: "old-mission.png" },
-  { name: "Susquehanna International Group", logoName: "sig.png" },
-  { name: "Stevens Capital Management", logoName: "scm.svg" },
-  { name: "Princeton GEO Department", logoName: "geo.png" },
-  {
-    name: "Princeton Institute for Computational Science and Engineering",
-    logoName: "prc.png",
-  },
+  'cos.png',
+  'jane-street.png',
+  'radix.png',
+  'citadel.png',
+  'est.png',
+  'old-mission.png',
+  'geo.png',
+  'pacm.jpg',
+  'sig.png',
+  'mat.png',
+  'scm.svg',
+  'orf.png',
+  'csml.png',
+  'prc.png',
+  'phy.png',
+  'hrt.png',
 ];
 
 export default function Home() {
@@ -130,9 +133,9 @@ export default function Home() {
               <div key={i} className="w-[300px] h-[100px]">
                 <div className="relative w-[200px] h-[100px] m-auto">
                   <Image
-                    key={sponsor.logoName}
-                    src={`/coscon/logos/${sponsor.logoName}`}
-                    alt={`${sponsor.name} logo`}
+                    key={sponsor}
+                    src={`/coscon/logos/${sponsor}`}
+                    alt={`${sponsor} logo`}
                     fill
                     style={{ objectFit: "contain" }}
                   />
