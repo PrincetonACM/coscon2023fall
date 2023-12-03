@@ -1,69 +1,3 @@
-// const problems = [
-//   {
-//     name: "Consulting Charade",
-//     points: 5,
-//     statementName: "ConsultingCharade.pdf",
-//     submissionType: "Codeforces",
-//     submissionUrl: "https://codeforces.com/group/bUW9rSzJeG/contest/435278",
-//   },
-//   {
-//     name: "The Construction Campaign",
-//     points: 15,
-//     statementName: "TheConstructionCampaign.pdf",
-//     submissionType: "Dropbox",
-//     submissionUrl: "https://www.dropbox.com/request/DW8loV5ZZksZWi3N9n7c",
-//   },
-//   {
-//     name: "Communication Conundrum",
-//     points: 15,
-//     statementName: "CommunicationConundrum.pdf",
-//     submissionType: "Codeforces",
-//     submissionUrl: "https://codeforces.com/group/bUW9rSzJeG/contest/435278",
-//   },
-//   {
-//     name: "Decryption Dilemma",
-//     points: 15,
-//     statementName: "DecryptionDilemma.pdf",
-//     submissionType: "Dropbox",
-//     submissionUrl: "https://www.dropbox.com/request/DW8loV5ZZksZWi3N9n7c",
-//   },
-//   {
-//     name: "March Sadness",
-//     points: 20,
-//     statementName: "MarchSadness.pdf",
-//     submissionType: "Codeforces",
-//     submissionUrl: "https://codeforces.com/group/bUW9rSzJeG/contest/435278",
-//   },
-//   {
-//     name: "The Missing Electron",
-//     points: 25,
-//     statementName: "TheMissingElectron.pdf",
-//     submissionType: "Dropbox",
-//     submissionUrl: "https://www.dropbox.com/request/DW8loV5ZZksZWi3N9n7c",
-//   },
-//   {
-//     name: "Cyberchondria",
-//     points: 20,
-//     statementName: "Cyberchondria.pdf",
-//     submissionType: "Codeforces",
-//     submissionUrl: "https://codeforces.com/group/bUW9rSzJeG/contest/435278",
-//   },
-//   {
-//     name: "Some Assembly Required",
-//     points: 25,
-//     statementName: "SomeAssemblyRequired.pdf",
-//     submissionType: "Dropbox",
-//     submissionUrl: "https://www.dropbox.com/request/DW8loV5ZZksZWi3N9n7c",
-//   },
-//   {
-//     name: "Theorems AI",
-//     points: 15,
-//     statementName: "TheoremsAI.pdf",
-//     submissionType: "Codeforces",
-//     submissionUrl: "https://codeforces.com/group/bUW9rSzJeG/contest/435278",
-//   },
-// ];
-
 const problems = [
   {
     name: "Codeforces Problem Test",
@@ -79,6 +13,76 @@ const problems = [
     submissionType: "Dropbox",
     submissionUrl: "https://www.dropbox.com/request/DW8loV5ZZksZWi3N9n7c",
   },
+  {
+    name: 'Mowing Poe Field',
+    points: 0,
+    statementName: 'Problem0.pdf',
+    submissionType: 'Codeforces',
+    submissionUrl: '',
+  },
+  {
+    name: 'Subway',
+    points: 5,
+    statementName: 'Problem1.pdf',
+    submissionType: 'Codeforces',
+    submissionUrl: '',
+  },
+  {
+    name: 'Maze',
+    points: 10,
+    statementName: 'Problem2.pdf',
+    submissionType: 'Codeforces',
+    submissionUrl: '',
+  },
+  {
+    name: 'FF Counter',
+    points: 10,
+    statementName: 'Problem3.pdf',
+    submissionType: 'Dropbox',
+    submissionUrl: 'https://www.dropbox.com/request/diSQh18757xLtqj8M8zn',
+  },
+  {
+    name: 'Secret Santa',
+    points: 15,
+    statementName: 'Problem4.pdf',
+    submissionType: 'Codeforces',
+    submissionUrl: '',
+  },
+  {
+    name: 'Hit The Fly',
+    points: 15,
+    statementName: 'Problem5.pdf',
+    submissionType: 'Dropbox',
+    submissionUrl: 'https://www.dropbox.com/request/EI87uVrVEdkFSF4NCQx3',
+  },
+  {
+    name: 'Data Corruption',
+    points: 25,
+    statementName: 'Problem6.pdf',
+    submissionType: 'Dropbox',
+    submissionUrl: 'https://www.dropbox.com/request/0c8sqtPODIWnMZoTBgLT',
+  },
+  {
+    name: 'Points',
+    points: 20,
+    statementName: 'Problem7.pdf',
+    submissionType: 'Dropbox',
+    submissionUrl: 'https://www.dropbox.com/request/9XOe6Uc3ZmEvFBMGoWpc',
+  },
+  {
+    name: 'Cache Sim',
+    points: 30,
+    statementName: 'Problem8.pdf',
+    submissionType: 'Dropbox',
+    submissionUrl: 'https://www.dropbox.com/request/BynVaKGRCgztL2BuzNEf',
+  },
+  {
+    name: 'Uber',
+    points: 0,
+    statementName: 'Problem9.pdf',
+    submissionType: 'Dropbox',
+    submissionUrl: 'https://www.dropbox.com/request/rv41Kc4WUy2Bd28uywl0',
+  }
 ];
 
 export default function Home() {
@@ -99,7 +103,6 @@ export default function Home() {
         </h1>
       </div>
       <div className="max-w-4xl w-full">
-        {/* <p><b>Coming soon!</b></p> */}
         <p className="mb-3">
           There are <b>{problems.length} problems</b> worth a total of{" "}
           <b>
@@ -178,7 +181,7 @@ export default function Home() {
             <h2 className="text-2xl font-semibold mb-3">{`P${index}: ${problem.name} [${problem.points} points]`}</h2>
             <a
               className="p-1 rounded bg-orange-500 font-semibold mr-3"
-              href={problem.statementName}
+              href={`/coscon/statements/${problem.statementName}`}
               target="_blank"
               rel="noopener noreferrer"
             >
