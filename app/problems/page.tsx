@@ -1,52 +1,43 @@
 const problems = [
   {
-    name: "Codeforces Problem Test",
-    points: 0,
-    statementName: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    submissionType: "Codeforces",
-    submissionUrl: "https://codeforces.com/group/bUW9rSzJeG/contest/435278",
-  },
-  {
-    name: "File Problem Test",
-    points: 0,
-    statementName: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    submissionType: "Dropbox",
-    submissionUrl: "https://www.dropbox.com/request/DW8loV5ZZksZWi3N9n7c",
-  },
-  {
     name: 'Mowing Poe Field',
-    points: 0,
+    points: 1,
     statementName: 'Problem0.pdf',
     submissionType: 'Codeforces',
     submissionUrl: '',
+    testData: null,
   },
   {
-    name: 'Subway',
+    name: 'Princeton Subway Network',
     points: 5,
     statementName: 'Problem1.pdf',
     submissionType: 'Codeforces',
     submissionUrl: '',
+    testData: null,
   },
   {
-    name: 'Maze',
+    name: 'Galactic Vacation',
     points: 10,
     statementName: 'Problem2.pdf',
     submissionType: 'Codeforces',
     submissionUrl: '',
+    testData: null,
   },
   {
-    name: 'FF Counter',
+    name: 'Flip Flop Counters',
     points: 10,
     statementName: 'Problem3.pdf',
     submissionType: 'Dropbox',
     submissionUrl: 'https://www.dropbox.com/request/diSQh18757xLtqj8M8zn',
+    testData: null,
   },
   {
     name: 'Secret Santa',
     points: 15,
     statementName: 'Problem4.pdf',
-    submissionType: 'Codeforces',
-    submissionUrl: '',
+    submissionType: 'Dropbox',
+    submissionUrl: 'https://www.dropbox.com/request/OjRIWUTgxAiOLR4tJNcC',
+    testData: null,
   },
   {
     name: 'Hit The Fly',
@@ -54,36 +45,49 @@ const problems = [
     statementName: 'Problem5.pdf',
     submissionType: 'Dropbox',
     submissionUrl: 'https://www.dropbox.com/request/EI87uVrVEdkFSF4NCQx3',
+    testData: null,
   },
   {
-    name: 'Data Corruption',
+    name: 'Air Goodness Index',
     points: 25,
     statementName: 'Problem6.pdf',
     submissionType: 'Dropbox',
     submissionUrl: 'https://www.dropbox.com/request/0c8sqtPODIWnMZoTBgLT',
+    testData: 'agi_data.zip',
   },
   {
-    name: 'Points',
+    name: 'What\'s the point?',
     points: 20,
     statementName: 'Problem7.pdf',
     submissionType: 'Dropbox',
     submissionUrl: 'https://www.dropbox.com/request/9XOe6Uc3ZmEvFBMGoWpc',
+    testData: null,
   },
   {
-    name: 'Cache Sim',
+    name: 'CacheSim',
     points: 30,
     statementName: 'Problem8.pdf',
     submissionType: 'Dropbox',
     submissionUrl: 'https://www.dropbox.com/request/BynVaKGRCgztL2BuzNEf',
+    testData: null,
   },
   {
-    name: 'Uber',
-    points: 0,
+    name: 'Tiger Rides',
+    points: 28,
     statementName: 'Problem9.pdf',
     submissionType: 'Dropbox',
     submissionUrl: 'https://www.dropbox.com/request/rv41Kc4WUy2Bd28uywl0',
-  }
-];
+    testData: 'trides_data.zip',
+  },
+  {
+    name: 'Course Registration',
+    points: 20,
+    statementName: 'Problem10.pdf',
+    submissionType: 'None',
+    submissionUrl: null,
+    testData: null,
+  },
+]
 
 export default function Home() {
   return (
@@ -187,14 +191,30 @@ export default function Home() {
             >
               View statement
             </a>
-            <a
-              className="p-1 rounded bg-orange-500 font-semibold"
-              href={problem.submissionUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Submit to {problem.submissionType}
-            </a>
+            {
+              problem.testData
+                ? <a
+                  className="p-1 rounded bg-orange-500 font-semibold mr-3"
+                  href={`/coscon/data/${problem.testData}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Get test data
+                </a>
+                : null
+            }
+            {
+              problem.submissionType === 'None'
+                ? null
+                : <a
+                  className="p-1 rounded bg-orange-500 font-semibold"
+                  href={problem.submissionUrl!}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Submit to {problem.submissionType}
+                </a>
+            }
           </div>
         ))}
       </div>
