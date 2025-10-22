@@ -38,16 +38,16 @@ export default function Home() {
     <main className="flex flex-col items-center p-24">
       <div className="mb-3 max-w-4xl w-full justify-between flex flex-col md:flex-row">
         <h1 className="text-2xl font-mono font-semibold text-orange-500">
-          <a href="/coscon">COSCON Fall 2023</a>
+          <a href="/coscon2023fall">COSCON Fall 2023</a>
         </h1>
         <h1 className="text-xl font-semibold">
-          <a href="/coscon/problems">Problems</a>
+          <a href="/coscon2023fall/problems">Problems</a>
         </h1>
         <h1 className="text-xl font-semibold">
-          <a href="/coscon/rules">Rules</a>
+          <a href="/coscon2023fall/rules">Rules</a>
         </h1>
         <h1 className="text-xl font-semibold">
-          <a href="/coscon/leaderboard">Leaderboard</a>
+          <a href="/coscon2023fall/leaderboard">Leaderboard</a>
         </h1>
       </div>
       <div className="max-w-4xl w-full">
@@ -102,7 +102,7 @@ export default function Home() {
         </p>
         <div className="mb-6">
           <a
-            href="/coscon/problems"
+            href="/coscon2023fall/problems"
             className="p-1 rounded bg-orange-500 font-semibold"
           >
             See the problems!
