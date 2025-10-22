@@ -134,7 +134,7 @@ export default function Home() {
                 <div className="relative w-[200px] h-[100px] m-auto">
                   <Image
                     key={sponsor}
-                    src={`/coscon/logos/${sponsor}`}
+                    src={`/coscon2023fall/logos/${sponsor}`}
                     alt={`${sponsor} logo`}
                     fill
                     style={{ objectFit: "contain" }}
